@@ -1,29 +1,17 @@
 {
-  "name": "design-het-remote",
-  "version": "0.1.0",
+  "name": "root",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
+    "serve:installation": "cd packages/designhetInstallation && npm run serve",
+    "build:installation": "cd packages/designhetInstallation && npm run build",
+    "lint:installation": "cd packages/designhetInstallation && npm run lint",
+    "build:widget": "cd packages/design-het-widget && npm run build",
+    "storybook:widget": "cd packages/design-het-widget && npm run storybook",
+    "publish:widget": "cd packages/design-het-widget && npm run publish:widget",
+    "publish:widget:test": "cd packages/design-het-widget && npm run publish:test",
     "deploy:heroku": "git subtree push --prefix server heroku master"
   },
-  "dependencies": {
-    "core-js": "^2.6.5",
-    "design-het-widget": "^2.2.0",
-    "register-service-worker": "^1.6.2",
-    "socket.io-client": "^2.2.0",
-    "vue": "^2.6.10",
-    "vue-router": "^3.0.3"
-  },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.11.0",
-    "@vue/cli-plugin-eslint": "^3.11.0",
-    "@vue/cli-plugin-pwa": "^3.11.0",
-    "@vue/cli-service": "^3.11.0",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.0.0",
-    "vue-template-compiler": "^2.6.10"
+    "lerna": "^3.16.4"
   }
 }
